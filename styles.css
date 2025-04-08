@@ -149,6 +149,12 @@ body {
     font-family: 'CustomFont', 'Courier New', Courier, monospace;
 }
 
+.contact p {
+    display: inline-block;
+    margin-right: 20px; /* spacing between paragraphs */
+    white-space: nowrap; /* prevent wrapping inside each <p> */
+}
+
 .footer_top {
     margin: 10px;
     margin-left: 0px;
