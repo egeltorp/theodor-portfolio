@@ -149,6 +149,12 @@ body {
     font-family: 'CustomFont', 'Courier New', Courier, monospace;
 }
 
+.footer_top {
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .container {
     width: 50%;
     max-width: 1060px;
