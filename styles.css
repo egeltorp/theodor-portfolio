@@ -1,0 +1,99 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #ff4136; /* Red */
+}
+
+header h2 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    color: white;
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+section h3 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style: none;
+}
+
+section li {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+section a {
+    text-decoration: none;
+    color: #00bcd4; /* Cyan */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #ff4136; /* Red */
+}
+
+/* Additional container styles */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00bcd4;
+}
+
+footer a:hover {
+    color: #ff4136;
+}
