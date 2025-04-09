@@ -21,7 +21,7 @@
                 <p><a href="https://egeltorp.itch.io/" target="_blank"><i class="fas fa-gamepad"></i> Itch.io</a></p>
                 <p><a href="https://bsky.app/profile/egeltorp.com" target="_blank"><i class="fas fa-cloud"></i> Bluesky</a></p>
                 <p><a href="https://www.youtube.com/@egeltorpium" target="_blank"></i><i class="fab fa-youtube"></i> YouTube</a></p>
-                <p><a href="https://www.youtube.com/@egeltorpium"><i class="fab fa-github"></i> GitHub</a></p>
+                <p><a href="https://github.com/egeltorp"><i class="fab fa-github"></i> GitHub</a></p>
                 <p><a href="mailto:theodor@example.com"><i class="fas fa-envelope"></i> Email</a></p> 
             </div>
         </footer>
@@ -68,12 +68,28 @@
             </ul>
         </section>
 
+        <section class="projects" style="padding-bottom: 15px;">
+            <div class="command-line">
+                > Welcome to Theodor's Portfolio<br>
+                > Type 'exit' to quit.<br>
+                <span class="prompt">$</span>
+                <input type="text" class="terminal-input" placeholder="Type command..." />
+            </div>
+            <script>
+              document.querySelector('.terminal-input').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                  alert('You typed: ' + e.target.value);
+                }
+              });
+            </script>
+        </section>
+
         <section class="contact">
             <h3 id="contact">Contact & Socials</h3>
             <p><a href="https://egeltorp.itch.io/" target="_blank"><i class="fas fa-gamepad"></i> Itch.io</a></p>
             <p><a href="https://bsky.app/profile/egeltorp.com" target="_blank"><i class="fas fa-cloud"></i> Bluesky</a></p>
             <p><a href="https://www.youtube.com/@egeltorpium" target="_blank"></i><i class="fab fa-youtube"></i> YouTube</a></p>
-            <p><a href="https://www.youtube.com/@egeltorpium"><i class="fab fa-github"></i> GitHub</a></p>
+            <p><a href="https://github.com/egeltorp"><i class="fab fa-github"></i> GitHub</a></p>
             <p><a href="mailto:theodor@example.com"><i class="fas fa-envelope"></i> Email</a></p>
         </section>
 

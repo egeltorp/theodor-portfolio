@@ -54,12 +54,6 @@ header h1 {
     text-transform: uppercase;
     margin-bottom: 10px;
     margin-top: 20px;
-
-    background: linear-gradient(90deg, #df0024, #f3c300, #00ab9f,  #2e6db4);
-    background-size: 400% 400%;
-    color: transparent;
-    -webkit-background-clip: text;
-    animation: gradientFlash 12s ease infinite;
 }
 
 header h1::before {
@@ -76,18 +70,6 @@ header h1::before {
         rgba(0, 0, 0, 0.1) 3px
     );
     pointer-events: none;
-}
-
-@keyframes gradientFlash {
-    0% {
-        background-position: 400% 0;
-    }
-    50% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 400% 0;
-    }
 }
 
 header h2 {
@@ -185,8 +167,8 @@ body {
 
 .contact p {
     display: inline-block;
-    margin-right: 20px; /* spacing between paragraphs */
-    white-space: nowrap; /* prevent wrapping inside each <p> */
+    margin-right: 20px;
+    white-space: nowrap;
 }
 
 .footer_top {
@@ -203,6 +185,28 @@ body {
     font-size: 12px;
 }
 
+.command-line {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 15px;
+    border: 0px solid #ffffff;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+.command-line input {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
 @media screen and (max-width: 1024px) {
     body {
         padding: 0;
@@ -211,7 +215,7 @@ body {
 
     .container {
         width: 100%;
-        padding: 0px; /* optional: less padding on mobile */
+        padding: 0px;
         border-left: none;
         border-right: none;
     }
