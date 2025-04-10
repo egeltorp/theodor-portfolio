@@ -1,6 +1,6 @@
 # Theodor's Portfolio
 
-Welcome to my personal portfolio! I'm Theodor, an engineering student. This site showcases my work, music, games, and more with a minimalist, retro-styled design inspired by the early 2000s web.
+Welcome to my personal portfolio! I'm Theodor, a computer science student. This site showcases my work, music, games, and more with a minimalist, retro-styled design inspired by the early 2000s web.
 
 ## Features
 
