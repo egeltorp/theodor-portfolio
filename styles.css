@@ -5,210 +5,128 @@
     font-style: normal;
 }
 
+/* Contact Box */
+.contact {
+    text-align: left;      /* make sure header aligns left */
+}
+
+.contact h3 {
+    margin-bottom: 10px;   /* space below header */
+}
+
+.contact .links {
+    display: flex;
+    flex-wrap: wrap;       /* allow wrapping on smaller screens */
+    gap: 15px;             /* spacing between links */
+    justify-content: flex-start; /* align links to the left */
+}
+
+.contact .links a {
+    margin: 0;             /* flex + gap handles spacing */
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-left: 0px !important;
-    border-right: 0px !important;
-    border-bottom: 0px !important;
-    border-style: none;
 }
 
+/* CSS for scroll buffer + bottom gap */
+html, body {
+    height: auto;       /* allow natural height */
+    min-height: 100%;   /* ensure it fills at least the screen */
+}
+
+/* Windows XP vibe */
 body {
-    background-color: #121212;
-    color: #fff;
-    font-family: 'CustomFont', 'Courier New', Courier, monospace;
+    background: url('/winxp-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #000;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
     padding: 20px;
-    font-size: 12px;
+    padding-bottom: 40px;
+    font-size: 13px;
 }
 
+ul {
+    margin-left: 15px;
+}
+
+/* XP-style window */
 .container {
     width: 70%;
     max-width: 1000px;
-    margin-top: 0px;
-    border: 1px dashed #bbb;
-    padding: 20px;
-    padding-left: 0%;
-    padding-right: 0%;
-    background-color: #1a1a1a;
-    font-size: 12px;
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 0px;
-    border-bottom: 2px dashed #bbb;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
     margin-top: 20px;
+    border: 2px solid #0054e3;
+    background-color: #ece9d8;
+    font-size: 13px;
+
+    /* centered smooth shadow all around */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
 
-header h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: repeating-linear-gradient(
-        transparent,
-        transparent 1px,
-        rgba(0, 0, 0, 0.1) 1px,
-        rgba(0, 0, 0, 0.1) 3px
-    );
-    pointer-events: none;
+/* Blue title bar */
+.header {
+    background: linear-gradient(to bottom, #0054e3, #003399);
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #003399;
 }
 
-header h2 {
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #fff;
-    margin-bottom: 30px;
-}
-
+/* XP "Content Pane" */
 section {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border: 1px dashed #bbb;
+    margin: 15px;
+    border: 1px solid #999;
     padding: 15px;
-    padding-bottom: 40px;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 2px;
 }
 
 section h3 {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #003399;
 }
 
 section p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #bbb;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #000;
 }
 
-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-section li {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
+/* Hyperlink styles like XP */
 section a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    border-bottom: 1px dashed #bbb;
-    padding: 0;
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 section a:hover {
-    color: #ababab;
-    border-bottom: 1px dashed #ababab;
+    color: #551a8b;
 }
 
+/* Footer (status bar style) */
 footer {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 1rem;
-    color: #bbb;
-    border-top: 1px dashed #bbb;
-    padding-top: 10px;
-}
-
-footer a {
-    text-decoration: none;
-    color: #fff;
-}
-
-footer a:hover {
-    color: #9e9e9e;
-}
-
-section, footer {
-    border-radius: 0;
-}
-
-h1, h2, h3, p, li {
-    font-family: 'CustomFont', 'Courier New', Courier, monospace;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-header, footer {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-body {
-    background-color: #000000;
-    font-family: 'CustomFont', 'Courier New', Courier, monospace;
-}
-
-.contact p {
-    display: inline-block;
-    margin-right: 20px;
-    white-space: nowrap;
-}
-
-.footer_top {
-    margin: 10px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-.container {
-    width: 50%;
-    max-width: 1060px;
-    background-color: #000000;
-    border: 0px solid #bbb;
+    background: #ece9d8;
+    border-top: 1px solid #999;
+    padding: 4px 10px;
+    text-align: left;
     font-size: 12px;
+    color: #000;
+    font-family: Tahoma, Verdana, sans-serif;
 }
 
-.command-line {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    padding: 10px;
-    padding-bottom: 15px;
-    border: 0px solid #ffffff;
-    border-radius: 0px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 20px auto;
-}
-
-
-.command-line input {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    border: none;
-    outline: none;
-}
-
+/* Responsive */
 @media screen and (max-width: 1024px) {
     body {
         padding: 0;
@@ -217,8 +135,8 @@ body {
 
     .container {
         width: 100%;
-        padding: 0px;
-        border-left: none;
-        border-right: none;
+        margin: 0;
+        border: none;
+        border-radius: 0;
     }
 }
