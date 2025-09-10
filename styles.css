@@ -42,7 +42,7 @@ html, body {
 
 /* Windows XP vibe */
 body {
-    background: url('/winxp-bg.jpg') no-repeat center center fixed;
+    background: url('https://egeltorp.github.io/theodor-portfolio/winxp-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Tahoma, Verdana, sans-serif;
     color: #000;
