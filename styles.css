@@ -109,6 +109,7 @@ section a {
     color: #0000ee;
     text-decoration: underline;
     cursor: pointer;
+    font-size: 0.95rem;
 }
 
 section a:hover {
