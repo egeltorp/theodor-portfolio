@@ -83,6 +83,14 @@ ul {
     border-bottom: 2px solid #003399;
 }
 
+section.music > section {
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+    border: 0px solid #999;
+}
+
 /* XP "Content Pane" */
 section {
     margin: 15px;
