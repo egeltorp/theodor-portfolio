@@ -83,12 +83,37 @@ ul {
     border-bottom: 2px solid #003399;
 }
 
-section.music > section {
+/* Music Section */
+section.music > .music-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	margin-top: 1rem;
+    border: 0;
+}
+
+section.music > div {
 	margin-left: 0;
 	margin-bottom: 0;
 	padding-left: 0;
 	padding-bottom: 0;
-    border: 0px solid #999;
+	border: 0;
+}
+
+section.music h4 {
+    text-align: left;
+}
+
+section.music ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+section.music li p {
+	margin: 0.1rem 0 0;
+    margin-bottom: 0.8rem;
+	opacity: 0.8;
 }
 
 /* XP "Content Pane" */
@@ -150,7 +175,7 @@ footer {
     }
 }
 
-/* GAMES Section */
+/* Games Section */
 .games ol {
     list-style-type: decimal;
 	padding: 1rem;
