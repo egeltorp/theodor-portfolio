@@ -149,3 +149,73 @@ footer {
         border-radius: 0;
     }
 }
+
+/* GAMES Section */
+.games ol {
+    list-style-type: decimal;
+	padding: 1rem;
+    font-size: 0.9rem;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.8rem;
+}
+
+.games li {
+	margin: 0;
+}
+
+.games li p {
+	margin: 0.25rem 0 0;
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #ccc;
+	margin: 2rem 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* PICO-8 Section */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2em;
+    margin-top: 1.5em;
+}
+
+.game-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    display: block;
+}
+
+.game-card h3 {
+    text-align: center;
+    margin: 0.5em 0 0.25em 0;
+    font-size: 1em;
+}
+
+.game-card p {
+    text-align: center;
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
