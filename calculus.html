@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Single Variable Calculus – Cheat Sheet</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fa;
+    color: #1a1a2e;
+    padding: 24px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    border-top: 4px solid #4f8ef7;
+  }
+  .card.green  { border-top-color: #27ae60; }
+  .card.orange { border-top-color: #e67e22; }
+  .card.purple { border-top-color: #8e44ad; }
+  .card.red    { border-top-color: #e74c3c; }
+  .card.teal   { border-top-color: #16a085; }
+  .card.pink   { border-top-color: #e84393; }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1a1a2e;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+  }
+  td {
+    padding: 6px 4px;
+    vertical-align: middle;
+  }
+  tr:not(:last-child) td {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  td:first-child {
+    font-weight: 600;
+    width: 50%;
+    color: #333;
+  }
+  td:last-child {
+    color: #555;
+  }
+  .note {
+    font-size: 0.82rem;
+    color: #888;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  .rule-box {
+    background: #f8f9ff;
+    border-left: 3px solid #4f8ef7;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: 0.93rem;
+  }
+  .rule-box.green  { border-left-color: #27ae60; background: #f4fdf6; }
+  .rule-box.orange { border-left-color: #e67e22; background: #fff8f0; }
+  .rule-box.purple { border-left-color: #8e44ad; background: #fdf5ff; }
+  .rule-box.red    { border-left-color: #e74c3c; background: #fff5f5; }
+  .rule-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 2px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Single Variable Calculus</h1>
+<p class="subtitle">Cheat Sheet — derivatives, integrals, limits, factoring & key rules</p>
+
+<div class="grid">
+
+  <!-- BASIC DERIVATIVES -->
+  <div class="card">
+    <h2>📐 Basic Derivatives</h2>
+    <table>
+      <tr><td>\(f(x)\)</td><td>\(f'(x)\)</td></tr>
+      <tr><td>\(c\) (constant)</td><td>\(0\)</td></tr>
+      <tr><td>\(x^n\)</td><td>\(n x^{n-1}\)</td></tr>
+      <tr><td>\(e^x\)</td><td>\(e^x\)</td></tr>
+      <tr><td>\(a^x\)</td><td>\(a^x \ln a\)</td></tr>
+      <tr><td>\(\ln x\)</td><td>\(\dfrac{1}{x}\)</td></tr>
+      <tr><td>\(\log_a x\)</td><td>\(\dfrac{1}{x \ln a}\)</td></tr>
+      <tr><td>\(\sin x\)</td><td>\(\cos x\)</td></tr>
+      <tr><td>\(\cos x\)</td><td>\(-\sin x\)</td></tr>
+      <tr><td>\(\tan x\)</td><td>\(\dfrac{1}{\cos^2 x}\)</td></tr>
+      <tr><td>\(\arcsin x\)</td><td>\(\dfrac{1}{\sqrt{1-x^2}}\)</td></tr>
+      <tr><td>\(\arccos x\)</td><td>\(-\dfrac{1}{\sqrt{1-x^2}}\)</td></tr>
+      <tr><td>\(\arctan x\)</td><td>\(\dfrac{1}{1+x^2}\)</td></tr>
+    </table>
+  </div>
+
+  <!-- DERIVATIVE RULES -->
+  <div class="card green">
+    <h2>⚙️ Derivative Rules</h2>
+    <div class="rule-box green">
+      <div class="rule-label">Sum / Difference</div>
+      \((f \pm g)' = f' \pm g'\)
+    </div>
+    <div class="rule-box green">
+      <div class="rule-label">Constant Multiple</div>
+      \((cf)' = c \cdot f'\)
+    </div>
+    <div class="rule-box green">
+      <div class="rule-label">Product Rule</div>
+      \((fg)' = f'g + fg'\)
+    </div>
+    <div class="rule-box green">
+      <div class="rule-label">Quotient Rule</div>
+      \(\left(\dfrac{f}{g}\right)' = \dfrac{f'g - fg'}{g^2}\)
+    </div>
+    <div class="rule-box green">
+      <div class="rule-label">Chain Rule</div>
+      \((f(g(x)))' = f'(g(x)) \cdot g'(x)\)
+    </div>
+    <p class="note">Chain rule: differentiate outside, keep inside, multiply by derivative of inside.</p>
+  </div>
+
+  <!-- LIMITS -->
+  <div class="card orange">
+    <h2>🎯 Limits & Continuity</h2>
+    <div class="rule-box orange">
+      <div class="rule-label">Continuity at x = a</div>
+      \(f\) is continuous if: \(\lim_{x\to a} f(x) = f(a)\)
+    </div>
+    <div class="rule-box orange">
+      <div class="rule-label">L'Hôpital's Rule (0/0 or ∞/∞)</div>
+      \(\lim \dfrac{f}{g} = \lim \dfrac{f'}{g'}\)
+    </div>
+    <table style="margin-top:10px;">
+      <tr><td>\(\lim_{x\to 0} \dfrac{\sin x}{x}\)</td><td>\(= 1\)</td></tr>
+      <tr><td>\(\lim_{x\to 0} \dfrac{1-\cos x}{x}\)</td><td>\(= 0\)</td></tr>
+      <tr><td>\(\lim_{x\to \infty} \left(1+\dfrac{1}{x}\right)^x\)</td><td>\(= e\)</td></tr>
+      <tr><td>\(\lim_{x\to 0} \dfrac{e^x - 1}{x}\)</td><td>\(= 1\)</td></tr>
+    </table>
+  </div>
+
+  <!-- FACTORING -->
+  <div class="card purple">
+    <h2>🔢 Factoring Methods</h2>
+    <div class="rule-box purple">
+      <div class="rule-label">AC Method (for ax² + bx + c)</div>
+      Find two numbers that <strong>multiply to ac</strong> and <strong>add to b</strong>, then split and group.
+    </div>
+    <div class="rule-box purple">
+      <div class="rule-label">Difference of Squares</div>
+      \(a^2 - b^2 = (a+b)(a-b)\)
+    </div>
+    <div class="rule-box purple">
+      <div class="rule-label">Perfect Square</div>
+      \(a^2 \pm 2ab + b^2 = (a \pm b)^2\)
+    </div>
+    <div class="rule-box purple">
+      <div class="rule-label">Sum / Diff of Cubes</div>
+      \(a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)\)
+    </div>
+    <p class="note">Always check for common factors first before using other methods.</p>
+  </div>
+
+  <!-- BASIC INTEGRALS -->
+  <div class="card red">
+    <h2>∫ Basic Integrals</h2>
+    <table>
+      <tr><td>\(\int x^n \, dx\)</td><td>\(\dfrac{x^{n+1}}{n+1} + C\quad (n\neq-1)\)</td></tr>
+      <tr><td>\(\int \dfrac{1}{x} \, dx\)</td><td>\(\ln|x| + C\)</td></tr>
+      <tr><td>\(\int e^x \, dx\)</td><td>\(e^x + C\)</td></tr>
+      <tr><td>\(\int a^x \, dx\)</td><td>\(\dfrac{a^x}{\ln a} + C\)</td></tr>
+      <tr><td>\(\int \sin x \, dx\)</td><td>\(-\cos x + C\)</td></tr>
+      <tr><td>\(\int \cos x \, dx\)</td><td>\(\sin x + C\)</td></tr>
+      <tr><td>\(\int \dfrac{1}{1+x^2} \, dx\)</td><td>\(\arctan x + C\)</td></tr>
+      <tr><td>\(\int \dfrac{1}{\sqrt{1-x^2}} \, dx\)</td><td>\(\arcsin x + C\)</td></tr>
+    </table>
+  </div>
+
+  <!-- INTEGRATION RULES -->
+  <div class="card teal">
+    <h2>🔄 Integration Rules</h2>
+    <div class="rule-box" style="border-left-color:#16a085; background:#f0fffe;">
+      <div class="rule-label">Fundamental Theorem</div>
+      \(\int_a^b f(x)\,dx = F(b) - F(a)\) where \(F' = f\)
+    </div>
+    <div class="rule-box" style="border-left-color:#16a085; background:#f0fffe;">
+      <div class="rule-label">Substitution (u-sub)</div>
+      Let \(u = g(x)\), then \(du = g'(x)\,dx\)<br>
+      \(\int f(g(x))g'(x)\,dx = \int f(u)\,du\)
+    </div>
+    <div class="rule-box" style="border-left-color:#16a085; background:#f0fffe;">
+      <div class="rule-label">Integration by Parts</div>
+      \(\int u\,dv = uv - \int v\,du\)<br>
+      <span style="font-size:0.82rem; color:#888;">Choose u with LIATE: Log, Inverse trig, Algebraic, Trig, Exp</span>
+    </div>
+  </div>
+
+  <!-- KEY TRIG IDENTITIES -->
+  <div class="card pink">
+    <h2>📎 Key Trig Identities</h2>
+    <table>
+      <tr><td>\(\sin^2 x + \cos^2 x\)</td><td>\(= 1\)</td></tr>
+      <tr><td>\(1 + \tan^2 x\)</td><td>\(= \sec^2 x\)</td></tr>
+      <tr><td>\(\sin(2x)\)</td><td>\(= 2\sin x \cos x\)</td></tr>
+      <tr><td>\(\cos(2x)\)</td><td>\(= \cos^2 x - \sin^2 x\)</td></tr>
+      <tr><td>\(\sin^2 x\)</td><td>\(= \dfrac{1-\cos(2x)}{2}\)</td></tr>
+      <tr><td>\(\cos^2 x\)</td><td>\(= \dfrac{1+\cos(2x)}{2}\)</td></tr>
+    </table>
+  </div>
+
+  <!-- COMMON MISTAKES -->
+  <div class="card">
+    <h2>⚠️ Common Mistakes</h2>
+    <table>
+      <tr>
+        <td style="color:#e74c3c;">❌ \((f \cdot g)' = f' \cdot g'\)</td>
+        <td style="color:#27ae60;">✅ Use product rule</td>
+      </tr>
+      <tr>
+        <td style="color:#e74c3c;">❌ \(\dfrac{d}{dx}\sin(x^2) = \cos(x^2)\)</td>
+        <td style="color:#27ae60;">✅ \(= 2x\cos(x^2)\) (chain rule!)</td>
+      </tr>
+      <tr>
+        <td style="color:#e74c3c;">❌ \(\int e^{x^2}dx = \dfrac{e^{x^2}}{2x}\)</td>
+        <td style="color:#27ae60;">✅ No elementary form</td>
+      </tr>
+      <tr>
+        <td style="color:#e74c3c;">❌ \(\ln(a+b) = \ln a + \ln b\)</td>
+        <td style="color:#27ae60;">✅ \(\ln(ab) = \ln a + \ln b\)</td>
+      </tr>
+      <tr>
+        <td style="color:#e74c3c;">❌ Forget \(+C\) in indefinite integrals</td>
+        <td style="color:#27ae60;">✅ Always write \(+C\)</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>
